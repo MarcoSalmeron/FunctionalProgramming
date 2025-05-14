@@ -31,7 +31,7 @@ public class Serv_Persona implements Serv_Persona_Interface{
     public void getPersonas(){
         for(Persona pers: listaPersonas){
             System.out.println(pers);
-            System.out.println("\n");
+            System.out.println("");
         }
 
     }
@@ -40,10 +40,7 @@ public class Serv_Persona implements Serv_Persona_Interface{
     public void getPersonasMayores(){
         //Filtrar
         List<Persona> mayores25 = filtrarEdades(listaPersonas, esMayorDe25);
-        for(Persona pers : mayores25){
-            System.out.println(pers);
-            System.out.println("\n");
-        }
+        mayores25.forEach(System.out::println);
 
     }
 
